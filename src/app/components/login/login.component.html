@@ -1,0 +1,25 @@
+<md-card>
+  <md-card-title>
+    Entre
+  </md-card-title>
+  <md-card-content>
+    <section class="login-area">
+      <md-grid-list cols="4" rowHeight="fit" gutterSize="4px">
+        <md-grid-tile>
+          <md-input placeholder="e-mail" type="email"></md-input>
+        </md-grid-tile>
+        <md-grid-tile>
+          <md-input placeholder="senha" type="password"></md-input>
+        </md-grid-tile>
+        <md-grid-tile>
+          <button md-raised-button (click)="entrar($event)" [style.display]="!usuario.logado?'inherit':'none'" color="primary">Fazer login</button>
+          <button md-raised-button (click)="sair($event)" [style.display]="usuario.logado?'inherit':'none'" color="accent">Fazer Logout</button>
+        </md-grid-tile>
+        <md-grid-tile>
+          <button md-raised-button color="primary" (click)="cadastrar($event)">Cadastrar-se</button>
+        </md-grid-tile>
+      </md-grid-list>
+    </section>
+  </md-card-content>
+</md-card>
+

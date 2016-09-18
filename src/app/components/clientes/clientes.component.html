@@ -1,0 +1,15 @@
+<md-card>
+  <md-card-title>Lista de clientes</md-card-title>
+  <md-card-content>
+    <p *ngFor="let cliente of clientes | async">
+      {{cliente.nome}}
+    </p>
+  </md-card-content>
+</md-card>
+
+<md-card>
+  <md-card-title>Objeto clientes</md-card-title>
+  <md-card-content>
+    <pre>{{preClientes}}</pre>
+  </md-card-content>
+</md-card>

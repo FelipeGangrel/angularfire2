@@ -1,14 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-clientes',
+  templateUrl: './clientes.component.html',
+  styleUrls: ['./clientes.component.css']
 })
-export class AppComponent {
-  
-  public title: string;
+export class ClientesComponent implements OnInit {
+
   public clientes: any;
   public preClientes: any;
 
@@ -20,7 +19,12 @@ export class AppComponent {
       this.preClientes = JSON.stringify(snapshot.val(), null, 3);
     });
 
-    console.log(this.clientes);
   }
+
+
+  ngOnInit() {
+  }
+
+  
 
 }
